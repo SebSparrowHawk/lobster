@@ -170,6 +170,7 @@ class Parser:
 
 def load(mh, file_name):
     parser = Parser(mh, file_name)
+    print("=> Parsing config file: ", file_name)
     ast = parser.parse()
 
     # Resolve requires links now

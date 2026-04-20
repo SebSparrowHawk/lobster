@@ -146,6 +146,8 @@ class Item(metaclass=ABCMeta):
 
         # Check up references
         ok_up = True
+        if level.needs_tracing_up:
+            print("=> Yes, level needs tracing up")
         if level.needs_tracing_up and (not has_up_ref) and (not has_just_up):
             ok_up = False
             self.messages.append("missing up reference")
